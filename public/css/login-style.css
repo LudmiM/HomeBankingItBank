@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que cubre la pantalla completa */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.bienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100px; /* Altura fija para asegurar centrado vertical */
+}
+
+.bienvenida h1 {
+    font-size: 2rem;
+    color: #005fa3;
+    margin: 0; /* Elimina márgenes que puedan descentrar */
+    line-height: 1; /* Asegura que el texto no se desplace verticalmente */
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mejorada */
+    transition: box-shadow 0.3s ease; /* Transición suave en hover */
+}
+
+.container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Efecto al pasar el ratón */
+}
+
+.inses h2 {
+    font-size: 1.5rem;
+    color: #005fa3;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555; /* Un color más suave para el texto del label */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Efecto de transición en el borde */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #005fa3; /* Cambio de color al enfocar */
+    outline: none; /* Elimina el borde por defecto */
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio uniforme entre elementos */
+}
+
+button {
+    background-color: #005fa3;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Efecto de transición en el color */
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.regis,
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.regis p {
+    margin: 10px 0;
+}
+
+a {
+    color: #005fa3;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave en color */
+}
+
+a:hover {
+    color: #004080; /* Cambio de color en hover */
+    text-decoration: underline;
+}
