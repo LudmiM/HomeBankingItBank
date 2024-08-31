@@ -3,76 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../public/css/statement.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Movimientos Bancarios</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        h1 {
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Movimientos Bancarios</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Número de Operación</th>
-                    <th>Detalle/Concepto</th>
-                    <th>Importe</th>
-                    <th>Saldo Final</th>
-                    <th>Usuario/ Lugar</th>
-                    <th>Acciones</th>
+    <main class="main-statement">     
+        <h1 class="main-statement__title">Movimientos Bancarios</h1>
+        <table class="main-statement__table">
+            <thead class="main-statement__table__header remove__on__movil">
+                <tr class="main-statement__table__header__tr">
+                    <th class="main-statement__table__header__tr--th">Fecha</th>
+                    <th class="main-statement__table__header__tr--th remove__on__tablet">Número de Operación</th>
+                    <th class="main-statement__table__header__tr--th">Detalle</th>
+                    <th class="main-statement__table__header__tr--th">Importe</th>
+                    <th class="main-statement__table__header__tr--th">Saldo Final</th>
+                    <th class="main-statement__table__header__tr--th">Origen</th>
+                    <th class="main-statement__table__header__tr--th">Acciones</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>2024-08-30</td>
-                    <td>123456</td>
-                    <td>Compra en Supermercado</td>
-                    <td>$50.00</td>
-                    <td>$950.00</td>
-                    <td>Juan Pérez / Supermercado ABC</td>
-                    <td><boton>Detalle</boton></td>
+            <tbody class="main-statement__table__body">
+                <tr class="main-statement__table__body__row">
+                    <td class="main-statement__table__body__row--td">2024-08-30</td>
+                    <td class="main-statement__table__body__row--td remove__on__tablet">123456</td>
+                    <td class="main-statement__table__body__row--td">Compra en Supermercado</td>
+                    <td class="main-statement__table__body__row--td">$50.00</td>
+                    <td class="main-statement__table__body__row--td">$950.00</td>
+                    <td class="main-statement__table__body__row--td">Supermercado ABC</td>
+                    <td class="main-statement__table__body__row--td">
+                      <button class="main-statement__button">Detalle</button>
+                      <button class="main-statement__button">Guardar</button>
+                    </td>
                 </tr>
-                <tr>
-                    <td>2024-08-29</td>
-                    <td>123455</td>
-                    <td>Depósito de Efectivo</td>
-                    <td>$200.00</td>
-                    <td>$1,000.00</td>
-                    <td>Juan Pérez / Oficina</td>
-                    <td><boton>Detalle</boton></td>
+                <tr class="main-statement__table__body__row">
+                    <td class="main-statement__table__body__row--td">2024-08-29</td>
+                    <td class="main-statement__table__body__row--td remove__on__tablet">123455</td>
+                    <td class="main-statement__table__body__row--td">Depósito de Efectivo</td>
+                    <td class="main-statement__table__body__row--td">$200.00</td>
+                    <td class="main-statement__table__body__row--td">$1,000.00</td>
+                    <td class="main-statement__table__body__row--td">Oficina</td>
+                    <td class="main-statement__table__body__row--td">
+                      <button class="main-statement__button">Detalle</button>
+                      <button class="main-statement__button">Guardar</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
-    </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
-
-
-
-
-<!--Model design: https://images.app.goo.gl/xLR2viVW3BLtNHD3A-->
