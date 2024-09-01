@@ -1,3 +1,6 @@
+.body__signup{
+    background-color: #f0f4f8;
+}
 .container-form {  
     max-width: 400px;  
     margin: 50px auto;  
@@ -57,11 +60,6 @@ button {
 input[type="submit"]:hover,  
 button:hover {  
     background-color: #005fa3; 
-}  
-
-footer {  
-    text-align: center;  
-    margin-top: 20px;  
 }  
 
 a {  

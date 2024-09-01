@@ -1,103 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__namePage">
-        <ion-icon id="icon_list"  name="menu-outline"></ion-icon>
-        <h1 class="header__namePage--h1">ITBANK</h1>
-      </div>
-    </header>
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../public/css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__namePage">
+      <ion-icon id="icon_list" name="menu-outline"></ion-icon>
+      <h1 class="header__namePage--h1">ITBANK</h1>
+    </div>
+  </header>
+  <!--
     <div class="menu">
       <ion-icon id="icon_list"  name="menu-outline"></ion-icon>
       <ion-icon name="close-outline"></ion-icon>
     </div>-->
-    <div class="container__general">
-        <nav class="navbar sidebar">
-          <ul>
-            <li >
-              <a href="./index.html">
-                <ion-icon name="home-outline"></ion-icon>
-                <span>Inicio</span>
-              </a>
-            </li>
-            <li >
-              <a href="#">
-                <ion-icon name="newspaper-outline"></ion-icon>
-                <span>Cuentas</span>
-              </a>
-            </li>
-            <li >
-              <a href="#">
-                <ion-icon name="swap-horizontal-outline"></ion-icon>
-                <span>Transferencias</span>
-              </a>
-            </li>
-            <li >
-              <a href="#">
-                <ion-icon name="server-outline"></ion-icon>
-                <span>Prestamos</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      <main class="content__general__main">
-        <section class="form-section">
-            <h2 class="form-section--h2">Simulador de Préstamo</h2>
-            <form id="loan-form">
-                <div class="form-group">
-                    <label for="capital">Capital:</label>
-                    <input type="number" id="capital" placeholder="Ingrese el capital prestado" required>
-                    <i class="fas fa-coins"></i>
-                </div>
-                <div class="form-group">
-                    <label for="couta">Cuotas:</label>
-                    <input type="number" id="couta" placeholder="Ingrese las cuotas del préstamo" required>
-                    <i class="far fa-calendar-alt"></i>
-                </div>
-                <div class="form-group">
-                    <label for="interes">Interés:</label>
-                    <input type="number" id="interes" placeholder="Ingrese el interés a generar" required>
-                    <i class="fas fa-hand-holding-usd"></i>
-                </div>
-                <button class="prestamo__container__form--button" type="button" id="calculate-btn">Calcular</button>
-            </form>
-        </section>
-        
-        <section class="result-section">
-            <table class="result-table">
-                <thead>
-                    <tr>
-                        <th>NRO</th>
-                        <th>Capital</th>
-                        <th>Interés</th>
-                        <th>Importe a Pagar</th>
-                    </tr>
-                </thead>
-                <tbody id="tab">
-                    <!-- Filas generadas por JavaScript -->
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>Total</td>
-                        <td id="t1"></td>
-                        <td id="t2"></td>
-                        <td id="t3"></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-    </main>
+  <div class="content__general">
+    <div class="sidebar">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="#">
+              <ion-icon name="home-outline"></ion-icon>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="./view/statement.html">
+              <ion-icon name="newspaper-outline"></ion-icon>
+              <span>Cuentas</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ion-icon name="swap-horizontal-outline"></ion-icon>
+              <span>Transferencias</span>
+            </a>
+          </li>
+          <li>
+            <a href="./prestamos.html">
+              <ion-icon name="server-outline"></ion-icon>
+              <span>Prestamos</span>
+            </a>
+          </li>
+          <li>
+            <a href="./forms/currency-converter.html">
+              <ion-icon name="swap-horizontal-outline"></ion-icon>
+              <span>Conversor de divisas</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <script src="./../public/js/script.js">  </script>
-    <script src="../public/js/prestamo.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  </body>
+    <main class="content__general__main">
+      <div class="main-statement">
+        <section class="form-section">
+          <h2 class="form-section--h2">Simulador de Préstamo</h2>
+          <form id="loan-form">
+            <div class="form-group">
+              <label for="capital">Capital:</label>
+              <input type="number" id="capital" placeholder="Ingrese el capital prestado" required>
+              <i class="fas fa-coins"></i>
+            </div>
+            <div class="form-group">
+              <label for="couta">Cuotas:</label>
+              <input type="number" id="couta" placeholder="Ingrese las cuotas del préstamo" required>
+              <i class="far fa-calendar-alt"></i>
+            </div>
+            <div class="form-group">
+              <label for="interes">Interés:</label>
+              <input type="number" id="interes" placeholder="Ingrese el interés a generar" required>
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <button class="prestamo__container__form--button" type="button" id="calculate-btn">Calcular</button>
+          </form>
+        </section>
+
+        <section class="result-section">
+          <table class="result-table">
+            <thead>
+              <tr>
+                <th>NRO</th>
+                <th>Capital</th>
+                <th>Interés</th>
+                <th>Importe a Pagar</th>
+              </tr>
+            </thead>
+            <tbody id="tab">
+              <!-- Filas generadas por JavaScript -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total</td>
+                <td id="t1"></td>
+                <td id="t2"></td>
+                <td id="t3"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="./../public/js/script.js">  </script>
+  <script src="../public/js/prestamo.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
