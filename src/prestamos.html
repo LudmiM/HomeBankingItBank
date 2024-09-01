@@ -13,14 +13,13 @@
         <h1 class="header__namePage--h1">ITBANK</h1>
       </div>
     </header>
-
+    <!--
     <div class="menu">
       <ion-icon id="icon_list"  name="menu-outline"></ion-icon>
       <ion-icon name="close-outline"></ion-icon>
-    </div>
+    </div>-->
     <div class="container__general">
-      <div class="sidebar">
-        <nav class="navbar">
+        <nav class="navbar sidebar">
           <ul>
             <li >
               <a href="./index.html">
@@ -48,55 +47,53 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <main class="content__general__main"></main>
-        <div class="form">
-          <fieldset>
-              <h2>SIMULADOR DE PRESTAMO</h2>
-              <form>
-                  <div>
-                      <label for="capital">CAPITAL 
-                          <input type="number" placeholder="Ingrese el capital prestado" id="capital">
-                          <i class="fas fa-coins"></i>
-                      </label>
-                  </div>
-                  <div>
-                      <label for="couta">CUOTAS 
-                          <input type="number" placeholder="Ingrese las cuotas del prestamo" id="couta">
-                          <i class="far fa-calendar-alt"></i>
-                      </label>
-                  </div>
-                  <div>
-                      <label for="interes">INTERES
-                          <input type="number" placeholder="Ingrese el interés a generar" id="interes">
-                          <i class="fas fa-hand-holding-usd"></i>
-                      </label>
-                  </div>
-              </form>
-          <button onclick="gen_table();">CALCULAR</button>
-          </fieldset>
-          <table class="tab">
-              <thead>
-                  <tr>
-                      <td class="nro">NRO</td>
-                      <td>CAPITAL</td>
-                      <td>INTERES</td>
-                      <td>IMPORTE A PAGAR</td>
-                  </tr>
-              </thead>
-              <tbody id="tab">
-              </tbody>
-              <tfoot>
-                  <tr>
-                      <td class="ft">TOTAL</td>
-                      <td id="t1"></td>
-                      <td id="t2"></td>
-                      <td id="t3"></td>
-                  </tr>
-              </tfoot>
-          </table>
-        </div>
-      </main>
+      <main class="content__general__main">
+        <section class="form-section">
+            <h2 class="form-section--h2">Simulador de Préstamo</h2>
+            <form id="loan-form">
+                <div class="form-group">
+                    <label for="capital">Capital:</label>
+                    <input type="number" id="capital" placeholder="Ingrese el capital prestado" required>
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="form-group">
+                    <label for="couta">Cuotas:</label>
+                    <input type="number" id="couta" placeholder="Ingrese las cuotas del préstamo" required>
+                    <i class="far fa-calendar-alt"></i>
+                </div>
+                <div class="form-group">
+                    <label for="interes">Interés:</label>
+                    <input type="number" id="interes" placeholder="Ingrese el interés a generar" required>
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <button class="prestamo__container__form--button" type="button" id="calculate-btn">Calcular</button>
+            </form>
+        </section>
+        
+        <section class="result-section">
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>NRO</th>
+                        <th>Capital</th>
+                        <th>Interés</th>
+                        <th>Importe a Pagar</th>
+                    </tr>
+                </thead>
+                <tbody id="tab">
+                    <!-- Filas generadas por JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td id="t1"></td>
+                        <td id="t2"></td>
+                        <td id="t3"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
     </div>
     <script src="./../public/js/script.js">  </script>
     <script src="../public/js/prestamo.js"></script>

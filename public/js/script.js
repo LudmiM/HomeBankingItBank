@@ -17,7 +17,6 @@ menu.addEventListener("click",()=>{
     }
 });
 
-
 icon_list.addEventListener("click",()=>{
     sidebar.classList.toggle("mini-sidebar")
     spans.forEach((span)=>{
