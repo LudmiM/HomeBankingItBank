@@ -1,13 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');  
-
-body {  
-    font-family: 'Roboto', sans-serif;  
-    background-color: #f4f4f4;  
-    color: #333;  
-    margin: 0;  
-    padding: 0;  
-}  
-
+.body__signup{
+    background-color: #f0f4f8;
+}
 .container-form {  
     max-width: 400px;  
     margin: 50px auto;  
@@ -67,11 +60,6 @@ button {
 input[type="submit"]:hover,  
 button:hover {  
     background-color: #005fa3; 
-}  
-
-footer {  
-    text-align: center;  
-    margin-top: 20px;  
 }  
 
 a {  

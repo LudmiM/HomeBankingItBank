@@ -1,0 +1,60 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    height: 110vh;
+    overflow:hidden;
+    padding: 20px 15px ; 
+    background-color: var(--color-sidebar);
+    transition: width 0.5s ease, backgound-color 0.3s ease,left 0.5s ease;
+}
+
+.mini-sidebar{
+    width: 80px;
+}
+
+span{
+    width: 100px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+}
+
+span.oculto{
+    opacity: 0;
+    width: 0;
+}
+
+/*-->Menu navegacion*/
+.sidebar .navbar li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+    
+}
+
+.sidebar .navbar a{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: var(--color-sidebar);
+    color: var(--color-text-menu);  
+}
+
+.sidebar .navbar a:hover{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-text);
+}
+
+.sidebar .navbar ion-icon{
+    min-width: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+

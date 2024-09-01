@@ -6,53 +6,53 @@
     <title>Inicia sesión - ITBANK</title>  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />  
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="../../public/css/login-style.css">  
+    <link rel="stylesheet" href="../../public/css/style.css">  
 </head>  
-<body>  
-    <div class="container"> 
-        <div class="bienvenida">  
-            <h1>¡Bienvenido!</h1>  
+<body class="body__login">  
+    <div class="login__container"> 
+        <div class="login__container__bienvenida">  
+            <h1 class="login__container__bienvenida--h1">¡Bienvenido!</h1>  
         </div>   
-        <div class="fcel">  
-            <div class="inses">  
-                <h2>Inicia sesión</h2>  
+        <div class="login__container__fcel">  
+            <div class="login__container__inses">  
+                <h2 class="login__container__inses--h2">Inicia sesión</h2>  
             </div>  
-            <form action="/formulario" method="GET" class="form">  
-                <div class="form-group">  
-                    <label for="dni">DNI:</label>  
-                    <input type="text" id="dni" name="dni" placeholder="Ingresa tu DNI" required>  
+            <form action="/formulario" method="GET" class="login__container__form">  
+                <div class="login__container__form__form-group">  
+                    <label class="login__container__form__form-group--label" for="dni">DNI:</label>  
+                    <input class="login__container__form__form-group--input" type="text" id="dni" name="dni" placeholder="Ingresa tu DNI" required>  
                 </div>  
                 
-                <div class="form-group">  
-                    <label for="usuario">Usuario:</label>  
-                    <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>  
+                <div class="login__container__form__form-group">  
+                    <label class="login__container__form__form-group--label" for="usuario">Usuario:</label>  
+                    <input class="login__container__form__form-group--input" type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>  
                 </div>  
                 
-                <div class="form-group">  
-                    <label for="clave">Contraseña:</label>  
-                    <input type="password" id="clave" name="clave" placeholder="Tu clave" required>  
+                <div class="login__container__form__form-group">  
+                    <label class="login__container__form__form-group--label" for="clave">Contraseña:</label>  
+                    <input class="login__container__form__form-group--input" type="password" id="clave" name="clave" placeholder="Tu clave" required>  
                 </div>  
 
-                <div class="form-group checkbox-group">  
-                    <input type="checkbox" id="recordar" name="recordar">  
-                    <label for="recordar">Recordar tus datos</label>  
+                <div class="checkbox-group">  
+                    <input class="login__container__form__form-group--input__checkbox-group" type="checkbox" id="recordar" name="recordar">  
+                    <label class="login__container__form__form-group--label__checkbox-group" for="recordar">Recordar tus datos</label>  
                 </div>  
 
-                <button type="submit">Iniciar sesión</button>  
+                <button class="login__container__form--button" type="submit">Iniciar sesión</button>  
             </form>  
             <div class="regis">  
-                <p>¿Aún no tienes una cuenta?</p>  
-                <b><a href="signup.html">Regístrate acá</a></b>  
+                <p class="regis__p">¿Aún no tienes una cuenta?</p>  
+                <a class="login__container__form--a" href="signup.html">Regístrate acá</a> 
             </div>  
             <div class="links">  
-                <a href="#">Olvidé mi usuario y/o clave</a>  
+                <a class="login__container__form--a" href="#">Olvidé mi usuario y/o clave</a>  
                 <br />
-                <a href="#">Bloqueé mi usuario</a>  
+                <a class="login__container__form--a" href="#">Bloqueé mi usuario</a>  
             </div>  
         </div>  
     </div>  
 
-    <script src="/public/js/login.js"></script>
+    <script src="../../public/js/login.js"></script>
 
 </body>  
 </html>  
