@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago de Facturas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/billpayment.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Pago de Facturas</h2>
+        <div class="form-group">
+            <label for="provider">Proveedor de Servicio:</label>
+            <select id="provider" required>
+                <option value="">Seleccione un proveedor</option>
+                <option value="servicio de luz">Edesur</option>
+                <option value="servicio de luz">Edenor</option>
+                <option value="servicio de agua">Aysa</option>
+                <option value="servicio de gas">Metrogas</option>
+                <option value="compañia de internet">Telecentro</option>
+                <option value="servicio de cable">Fibertel</option>
+                <option value="compañia celular">Movistar</option>
+                <option value="compañia celular">Personal</option>
+                <option value="compañia celular">Claro</option>
+            </select>
+        </div> 
+        <div class="form-group">
+            <label for="amount">Monto a Pagar:</label>
+            <input type="number" id="amount" required>
+        </div>
+        <div class="form-group">
+            <label for="account">Número de Factura:</label>
+            <input type="text" id="account" required>
+        </div>
+        <div class="form-group">
+            <label for="userKey">Clave Token:</label>
+            <input type="password" id="userKey" required>
+        </div>
+        <button class="button" onclick="Payment.processPayment()">Realizar Pago</button>
+        <div id="message"></div>
+    </div>
+    <script src="/public/js/payment.js"></script>
+</body>
+</html>
