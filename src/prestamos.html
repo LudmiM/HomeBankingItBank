@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../public/css/prestamo.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="name-page">
+        <ion-icon id="icon_list"  name="menu-outline"></ion-icon>
+        <h1>ITBANK</h1>
+      </div>
+    </header>
+
+    <div class="menu">
+      <ion-icon id="icon_list"  name="menu-outline"></ion-icon>
+      <ion-icon name="close-outline"></ion-icon></div>
+    <div class="container">
+      <div class="sidebar">
+        <nav class="navbar">
+          <ul>
+            <li >
+              <a href="./index.html">
+                <ion-icon name="home-outline"></ion-icon>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li >
+              <a href="#">
+                <ion-icon name="newspaper-outline"></ion-icon>
+                <span>Cuentas</span>
+              </a>
+            </li>
+            <li >
+              <a href="#">
+                <ion-icon name="swap-horizontal-outline"></ion-icon>
+                <span>Transferencias</span>
+              </a>
+            </li>
+            <li >
+              <a href="#">
+                <ion-icon name="server-outline"></ion-icon>
+                <span>Prestamos</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="form">
+        <fieldset>
+            <h2>SIMULADOR DE PRESTAMO</h2>
+            <form>
+                <div>
+                    <label for="capital">CAPITAL 
+                        <input type="number" placeholder="Ingrese el capital prestado" id="capital">
+                        <i class="fas fa-coins"></i>
+                    </label>
+                </div>
+                <div>
+                    <label for="couta">CUOTAS 
+                        <input type="number" placeholder="Ingrese las cuotas del prestamo" id="couta">
+                        <i class="far fa-calendar-alt"></i>
+                    </label>
+                </div>
+                <div>
+                    <label for="interes">INTERES
+                        <input type="number" placeholder="Ingrese el interés a generar" id="interes">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </label>
+                </div>
+            </form>
+        <button onclick="gen_table();">CALCULAR</button>
+        </fieldset>
+        <table class="tab">
+            <thead>
+                <tr>
+                    <td class="nro">NRO</td>
+                    <td>CAPITAL</td>
+                    <td>INTERES</td>
+                    <td>IMPORTE A PAGAR</td>
+                </tr>
+            </thead>
+            <tbody id="tab">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="ft">TOTAL</td>
+                    <td id="t1"></td>
+                    <td id="t2"></td>
+                    <td id="t3"></td>
+                </tr>
+            </tfoot>
+        </table>
+      </div>
+    </div>
+    <script src="./../public/js/script.js">  </script>
+    <script src="../public/js/prestamo.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
