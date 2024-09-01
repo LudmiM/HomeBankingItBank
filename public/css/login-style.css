@@ -1,105 +1,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');  
 
-:root {  
-    --color-fondo: #62828b;  
-    --color-contenedor: #ededed;  
-    --color-texto: #3d3838;  
-    --color-boton: #221d1d;  
-    --color-boton-texto: #ededed;  
-    --color-boton-hover: rgb(201, 197, 197);  
-}  
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    line-height: 1.6; 
+}
 
-* {  
-    margin: 0;  
-    padding: 0;  
-    box-sizing: border-box;  
-    font-family: "Outfit", sans-serif;  
-}  
+.bienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100px; 
+}
 
-body {  
-    height: 100vh;  
-    width: 100%;  
-    background-color: var(--color-fondo);  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-}  
+.bienvenida h1 {
+    font-size: 2rem;
+    color: #005fa3;
+    margin: 0; 
+    line-height: 1; 
+}
 
-.container {  
-    max-width: 400px;  
-    width: 100%;  
-    background: var(--color-contenedor);  
-    padding: 30px;  
-    border-radius: 8px;  
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
-}  
+.container {
+    max-width: 400px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease; 
+}
 
-h2 {  
-    color: var(--color-texto);  
-    text-align: center;  
-    margin-bottom: 20px;  
-}  
+.container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
 
-.form-group {  
-    margin-bottom: 20px;  
-}  
+.inses h2 {
+    font-size: 1.5rem;
+    color: #056eb9;
+}
 
-label {  
-    display: block;  
-    margin-bottom: 8px;  
-    color: var(--color-texto);  
-    font-weight: 600;  
-}  
+.form {
+    margin-top: 20px;
+}
 
-input[type="text"],  
-input[type="password"] {  
-    width: 100%;  
-    padding: 12px;  
-    border: 1px solid #ccc;  
-    border-radius: 4px;  
-    font-size: 16px;  
-    box-sizing: border-box;  
-    transition: border-color 0.3s ease;  
-}  
+.form-group {
+    margin-bottom: 20px;
+}
 
-input[type="text"]:focus,  
-input[type="password"]:focus {  
-    border-color: var(--color-boton); 
-    outline: none; 
-}  
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555; 
+}
 
-button {  
-    background-color: var(--color-boton);  
-    color: var(--color-boton-texto);  
-    padding: 12px;  
-    border: none;  
-    border-radius: 4px;  
-    cursor: pointer;  
-    font-size: 16px;  
-    width: 100%;  
-    margin-top: 20px;  
-    transition: background-color 0.3s ease;  
-}  
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; 
+}
 
-button:hover {  
-    background-color: var(--color-boton-hover); 
-}  
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #005fa3; 
+    outline: none;
+}
 
-.footer {  
-    background-color: var(--color-contenedor);  
-    color: var(--color-texto);  
-    text-align: center;  
-    padding: 15px;  
-    margin-top: 20px;  
-}  
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
 
-.footer a {  
-    color: var(--color-boton);  
-    text-decoration: none;  
-    transition: color 0.3s ease;  
-}  
+button {
+    background-color: #005fa3;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; 
+}
 
-.footer a:hover {  
-    color: var(--color-boton-hover);  
-    text-decoration: underline; 
-}  
+button:hover {
+    background-color: #0487a8;
+}
+
+.regis,
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.regis p {
+    margin: 10px 0;
+}
+
+a {
+    color: #0576c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0383ce; 
+    text-decoration: underline;
+}
