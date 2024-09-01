@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 25%;
-    height: 100vh;
+    height: 110vh;
     overflow:hidden;
     padding: 20px 15px ; 
     background-color: var(--color-sidebar);
