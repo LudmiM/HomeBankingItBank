@@ -1,0 +1,50 @@
+.footer {
+    width: 100%;
+    background-color: var(--color-sidebar);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.footer .footer_social-icons--a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer__politicas .footer__politicas--p{
+    margin: 0;
+}
+.footer__social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.footer__social-icons footer_social-icons--a {
+    margin: 0 10px;
+}
+.fa-brands{
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer__politicas{
+        margin-bottom: 10px;
+    }
+
+    .social-icons{
+        margin-top: 10px;
+    }
+    .social-icons a{
+        margin: 0 15px;
+    }
+}
