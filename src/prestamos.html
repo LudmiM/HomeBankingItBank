@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./../public/css/prestamo.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <title>Prestamos - ITBANK</title>
   </head>
   <body>
     <header>
@@ -13,10 +14,10 @@
         <h1>ITBANK</h1>
       </div>
     </header>
-
     <div class="menu">
       <ion-icon id="icon_list"  name="menu-outline"></ion-icon>
-      <ion-icon name="close-outline"></ion-icon></div>
+      <ion-icon name="close-outline"></ion-icon>
+    </div>
     <div class="container">
       <div class="sidebar">
         <nav class="navbar">
@@ -28,22 +29,28 @@
               </a>
             </li>
             <li >
-              <a href="#">
+              <a href="./view/statement.html">
                 <ion-icon name="newspaper-outline"></ion-icon>
                 <span>Cuentas</span>
               </a>
             </li>
             <li >
-              <a href="#">
+              <a href="./forms/transferencias.html">
                 <ion-icon name="swap-horizontal-outline"></ion-icon>
                 <span>Transferencias</span>
               </a>
             </li>
             <li >
-              <a href="#">
+              <a href="./prestamos.html">
                 <ion-icon name="server-outline"></ion-icon>
                 <span>Prestamos</span>
               </a>
+            </li>
+            <li>
+            <a href="./forms/currency-converter.html">
+              <ion-icon name="git-compare-outline"></ion-icon>
+              <span>Conversor de divisas</span>
+            </a>
             </li>
           </ul>
         </nav>
@@ -53,31 +60,31 @@
             <h2>SIMULADOR DE PRESTAMO</h2>
             <form>
                 <div>
-                    <label for="capital">CAPITAL 
+                    <label class="input_simulador_label" for="capital">Capital:
                         <input type="number" placeholder="Ingrese el capital prestado" id="capital">
                         <i class="fas fa-coins"></i>
                     </label>
                 </div>
                 <div>
-                    <label for="couta">CUOTAS 
+                    <label class="input_simulador_label"  for="couta">Cuotas:
                         <input type="number" placeholder="Ingrese las cuotas del prestamo" id="couta">
                         <i class="far fa-calendar-alt"></i>
                     </label>
                 </div>
                 <div>
-                    <label for="interes">INTERES
+                    <label class="input_simulador_label"  for="interes">Interes:
                         <input type="number" placeholder="Ingrese el interés a generar" id="interes">
                         <i class="fas fa-hand-holding-usd"></i>
                     </label>
                 </div>
             </form>
-        <button onclick="gen_table();">CALCULAR</button>
+        <button onclick="gen_table();">Calcular</button>
         </fieldset>
         <table class="tab">
             <thead>
                 <tr>
                     <td class="nro">NRO</td>
-                    <td>CAPITAL</td>
+                    <td>C</td>
                     <td>INTERES</td>
                     <td>IMPORTE A PAGAR</td>
                 </tr>
@@ -99,5 +106,16 @@
     <script src="../public/js/prestamo.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <footer>
+      <div class="politica">
+        <p >&copy; 2024 ITBANK | <a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=es_LA" target="_blank" ><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://x.com/home?lang=es" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" ><i class="fa-brands fa-square-youtube"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" ><i class="fa-brands fa-square-instagram"></i></i></a>
+    </div>
+    </footer>
   </body>
 </html>

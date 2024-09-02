@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencias</title>
+    <link rel="stylesheet" href="./../../public/css/header.css" />
+    <link rel="stylesheet" href="./../../public/css/transferencias.css">
+    <link rel="stylesheet" href="./../../public/css/sidebar.css">
+    <link rel="stylesheet" href="./../../public/css/footer.css"> 
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <header>
+        <div class="name-page">
+            <ion-icon id="icon_list" name="menu-outline"></ion-icon>
+            <h1>ITBANK</h1>
+        </div>
+    </header>
+    <div class="menu">
+        <ion-icon id="icon_list"  name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <nav class="navbar">
+                <ul>
+                    <li >
+                        <a href="./../index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="./../view/statement.html">
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                            <span>Cuentas</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="#">
+                            <ion-icon name="swap-horizontal-outline"></ion-icon>
+                            <span>Transferencias</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="./../prestamos.html">
+                            <ion-icon name="server-outline"></ion-icon>
+                            <span>Prestamos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./../forms/currency-converter.html">
+                            <ion-icon name="git-compare-outline"></ion-icon>
+                            <span>Conversor de divisas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main class="transfers">
+            <div class="transfers-block">
+                <h1 id="Transferencias">TRANSFERENCIAS</h1>
+                <form id="transferForm" class="transfer-form">
+                    <label for="accountTo">Cuenta destino:</label>
+                    <input placeholder="CBU/ALIAS" type="text" id="accountTo" name="accountTo" required>
+                    <label for="amount">Monto:</label>
+                    <input placeholder="0$" type="number" id="amount" name="amount" required min="1">
+                    <button type="submit">Transferir</button>
+                </form>
+                <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+                    ¡Transferencia realizada con éxito!
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    <footer>
+        <div class="politica">
+            <p >&copy; 2024 ITBANK | <a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank" ><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://x.com/home?lang=es" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" ><i class="fa-brands fa-square-youtube"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" ><i class="fa-brands fa-square-instagram"></i></i></a>
+        </div>
+    </footer>
+    <script src="./../../public/js/script.js"></script>
+    <script src="./../../public/js/transferencias.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
